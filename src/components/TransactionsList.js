@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import DigitalWalletService from "../services/DigitalWalletService";
 
-const TutorialsList = () => {
+const TransactionsList = () => {
   const [trxns, setTrxns] = useState([]);
   const navigate = useNavigate();
 
@@ -26,17 +26,9 @@ const TutorialsList = () => {
 
   return (
     <div className="list row">
-     
-        <h4>Transactions List</h4>
-
-        {/* <ul className="list-group">
-          {trxns &&
-            trxns.map((trx, index) => (
-              <li key={index}>{trx.recipient.name}</li>
-            ))}
-        </ul> */}
-
         {trxns?.length > 0 ? (
+          <div style={{"width": "100%" }}>
+          <h4>Transactions List</h4>
           <table className="table">
             <thead>
               <tr>
@@ -61,10 +53,11 @@ const TutorialsList = () => {
                 ))}
             </tbody>
           </table>
-        ): <h2>No transactions found!</h2>}
+          </div>
+        ): <h4>No transactions found!</h4>}
 
     </div>
   );
 };
 
-export default TutorialsList;
+export default TransactionsList;

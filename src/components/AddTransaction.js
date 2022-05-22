@@ -5,7 +5,7 @@ import DigitalWalletService from "../services/DigitalWalletService";
 
 const AddTransaction = ({updateUserInfo}) => {
   const [users, setUsers] = useState([]);
-  const [recipientId, setRecipient] = useState("Select recipient");
+  const [recipientId, setRecipient] = useState("");
   const [amount, setAmount] = useState(0);
   const [notes, setNotes] = useState("");
   const [error, setError] = useState("");
@@ -52,7 +52,7 @@ const AddTransaction = ({updateUserInfo}) => {
             value={recipientId}
             onChange={(e) => setRecipient(e.target.value)}
           >
-            {/* <option value="-1" default>Select User</option> */}
+            <option value="-1" default>Select User</option>
             {users.map((usr, index) => (
               <option key={index} value={usr._id}>{usr.name}</option>
             ))}

@@ -3,20 +3,14 @@ import { Routes, Route, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import DigitalWalletService from "./services/DigitalWalletService";
-
-import AddTransaction from "./components/AddTutorial";
-// import Tutorial from "./components/Tutorial";
-import TutorialsList from "./components/TutorialsList";
+import AddTransaction from "./components/AddTransaction";
+import TransactionsList from "./components/TransactionsList";
 import Login from './components/Login';
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 function App() {
   const [balance, setBalance] = useState('0.00');
   const [userName, setUserName] = useState('');
-
-  // useEffect(() => {
-  //   getUserInfo();
-  // },)
 
   const getUserInfo = async () => {
     const resp = await DigitalWalletService.getUserInfo();
@@ -60,9 +54,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Login setUser={getUserInfo} />} />
           <Route path="/login" element={<Login setUser={getUserInfo}/>} />
-          <Route path="/transactions" element={<TutorialsList/>} />
+          <Route path="/transactions" element={<TransactionsList/>} />
           <Route path="/add" element={<AddTransaction updateUserInfo= {getUserInfo}/>} />
-          {/* <Route path="/tutorials/:id" element={<Tutorial/>} /> */}
         </Routes>
       </div>
     </div>
