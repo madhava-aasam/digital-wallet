@@ -21,6 +21,13 @@ npm start
 * Click on Login
 * Enter User name and password
 * Click Login button
+* Below credentials can be used
+
+| User name | Password |
+| :------------ |:---------------:| 
+| sandra | sandra |
+| sofia | sofia |
+| rachel| rachel|
 ### Dashboard
 On successful login it populates User name and Wallet balance. Also enables menu items New Transactin and Wallet Transactions 
 ### Make transaction
