@@ -22,7 +22,7 @@ const Login = ({setUser}) => {
             setUser();
             navigate('/transactions')
         } else {
-            setError("Invalid details!");
+            setError("Invalid username or password");
         }
 
     } 
@@ -42,9 +42,9 @@ const Login = ({setUser}) => {
       </div>
 
       <div className="form-group">
-        <label htmlFor="password">password</label>
+        <label htmlFor="password">Password</label>
         <input
-          type="text"
+          type="password"
           className="form-control"
           id="password"
           required
