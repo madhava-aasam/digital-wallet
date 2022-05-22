@@ -35,8 +35,8 @@ const TransactionsList = () => {
                 <th scope="col">#</th>
                 <th scope="col">Sender</th>
                 <th scope="col">Recipient</th>
-                <th scope="col">amount</th>
-                <th scope="col">notes</th>
+                <th scope="col">Amount</th>
+                <th scope="col">Notes</th>
               </tr>
             </thead>
             <tbody>

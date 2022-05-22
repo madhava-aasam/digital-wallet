@@ -45,7 +45,7 @@ function App() {
           </li>
         </div>
         <div style={{color: '#ffffff', fontSize: "1.6rem", display:"flex", justifyContent:"space-between"}}>
-          Name: <span style={{marginRight: "3rem"}}> {sessionStorage.getItem('name')}</span>
+          User name: <span style={{marginRight: "3rem"}}> {sessionStorage.getItem('name')}</span>
           Wallet balance: <span> {sessionStorage.getItem('balance')}</span>
         </div>
       </nav>
